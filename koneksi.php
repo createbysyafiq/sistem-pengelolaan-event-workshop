@@ -3,10 +3,12 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$db   = "";
+$db   = "db_event_workshop";
+$port = "3315";
 
-$koneksi = mysqli_connect($host, $user, $pass, $db);
 
-if (!koneksi) {
-    die("Koneksi gagal: " . mysqli_connect_error());
+$koneksi = mysqli_connect($host, $user, $pass, $db, $port);
+
+if (!$koneksi) {
+    die("koneksi database gagal: " . mysqli_connect_error());
 }

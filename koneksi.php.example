@@ -1,0 +1,14 @@
+<?php 
+// Salin file ini menjadi koneksi.php dan sesuaikan port/password MySQL Anda
+
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db   = "db_event_workshop";
+$port = 3306; // Sesuaikan port: 3306 (default XAMPP/Laragon) atau 3315
+
+$koneksi = mysqli_connect($host, $user, $pass, $db, $port);
+
+if (!$koneksi) {
+    die("Koneksi database gagal: " . mysqli_connect_error());
+}
