@@ -10,12 +10,10 @@ if(isset($_POST['simpan'])) {
     $sql = "INSERT INTO tickets (tipe_tiket, harga, kuota, benefit) VALUES (?, ?, ?,?)";
     $stmt = mysqli_prepare($koneksi, $sql);
 
-       if ($stmt) {
-        // "siis" -> string, integer, integer, string
+    if ($stmt) {
         mysqli_stmt_bind_param($stmt, "siis", $tipe_tiket, $harga, $kuota, $benefit);
 
         if (mysqli_stmt_execute($stmt)) {
-            // Berhasil simpan, kembali ke tabel tiket
             header("Location: index.php?status=sukses");
             exit;
         } else {
@@ -28,7 +26,6 @@ if(isset($_POST['simpan'])) {
     }
 
 } else {
-    // Jika ada yang akses langsung URL tanpa submit form
     header("Location: index.php");
     exit;
 }
