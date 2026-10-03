@@ -7,7 +7,7 @@ include "../koneksi.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Pemesanan Tiket & Kategori</title>
-    <link rel="stylesheet" href="style.css?v=<?= time(); ?>">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-slate-100 min-h-screen py-10 px-4 font-sans text-gray-800">
 
