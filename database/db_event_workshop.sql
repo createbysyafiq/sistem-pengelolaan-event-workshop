@@ -47,3 +47,25 @@ INSERT INTO peserta (nama_lengkap, email, no_hp, institusi, id_tiket) VALUES
 ('Siti Rahma', 'siti.rahma@yahoo.com', '081987654321', 'Institut Teknologi Bandung', 2),
 ('Andi Pratama', 'andi.pratama@gmail.com', '085712345678', 'SMK Negeri 1', 3);
 
+
+-- ==========================================
+-- Modul: Pembicara (Speaker)
+-- ==========================================
+
+-- Struktur Tabel `pembicara`
+CREATE TABLE IF NOT EXISTS pembicara (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nama VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    topik VARCHAR(200) NOT NULL,
+    institusi VARCHAR(100) NOT NULL,
+    no_hp VARCHAR(20) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Contoh Data Awal Pembicara (Dummy Data)
+INSERT INTO pembicara (nama, email, topik, institusi, no_hp) VALUES
+('Dr. Ir. Syafiq Ahmad', 'syafiq@expert.com', 'AI & Machine Learning dalam Industri', 'Universitas Indonesia', '081122334455'),
+('Maya Putri, M.T.', 'maya.putri@tech.id', 'Pengembangan Web Modern dengan PHP & Mysql', 'Tech Innovators', '085566778899');
+
+
